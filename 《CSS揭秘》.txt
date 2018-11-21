@@ -1,0 +1,36 @@
+2018-10-15开始阅读电子版
+第0章===============================
+1、CSS编写的挑战： DRY、可维护、灵活性、轻量级、符合标准
+2、回退（fallback）机制：进行特性检测（Modernizr，@supports，或检测 element.style 对象相应属性），然后增强代码利用层叠覆盖低阶样式
+
+第1章================================
+1、W3C不“产生”标准，负责组织、监督、发布，制定过程浏览器厂商有更多发言权
+2、一周一次电话会议，每季度一次碰面会
+3、产出过程：编辑草案（ED） -> 首个公开工作草案（FPWD） -> 工作草案（WD） -> 候选推荐规范（CR） -> 提名推荐规范（PR） -> 正式推荐规范（REC）
+4、CSS 1、CSS 2为统一的单个规范，CSS2（或2.1）之后为多个规范的集合（每个规范为单个模块，包含不同的特性），从CSS 2.1升级后的规范命名为3（示例 选择符 http://w3.org/TR/selectors），新添加的模块规范从1开始（示例 CSS 变形 http://w3.org/TR/css-transforms-1）
+5、“CSS3”并不是规范定义词汇，一般指 CSS 规范第三版（Level 3）
+6、浏览器前缀：导致过多滥用，工具（Autoprefixer、-prefix-free等）
+7、currentColor 关键字：解析为 color
+8、inherit 关键字：总是绑定到父元素的计算值（对伪元素来说，则会取生成该伪元素的宿主元素）
+9、媒体查询：适用于基于不同阶梯（断点）实现，不能以连续的方式进行，避免不必要的媒体查询：使用百分比长度或视口相关的单位（ vw 、 vh 、 vmin 和 vmax ）来取代固定长度
+10、替换元素（比如 img 、 object 、 video 、 iframe 等）
+11、根据情况书写展开式属性或简写属性或两者同时使用，目的就是 DRY 尽量减少代码重复
+12、在 background 简写属性中使用一个斜杠（ / ）作为分隔 background-size 和 background-position
+13、受预处理器启发的新特性正在增加：变量定义（--开头），calc()函数，color()函数，（正在讨论的）嵌套
+14、原生特性通常比预处理器提供的版本要强大得多，可以在运行时求值（例如100% - 50px），可以被js读取修改，避免依赖或滥用预处理器
+
+第2章==================================
+1、RGBA/HSLA 颜色 Red-Green-Blue-Alpha Hue-Saturation-Lightness-Alpha
+2、每个元素身上都存在三个矩形框：border box（边框的外沿框）、padding box（内边距的外沿框）和 content box（内容区的外沿框）
+3、box-shadow 会按元素的圆角进行，outline（描边）不会按圆角实现（此点可能会在未来改成跟box-shadow一致）
+4、需要把一句 CSS 代码打断为多行，只要用反斜杠（\）来转义每行末尾的换行就可以
+
+S1、半透明边框（background-clip）
+S2、多重边框（box-shadow 支持逗号分隔语法，可以创建任意数量层的投影，是层层叠加的，只能模拟实线边框）（border + outline 只支持双边框）
+S3、背景定位在右下角并含空隙（background-position）（background-origin）（calc() ）
+S4、单个元素边框内圆角（box-shadow + outline）
+S5、条纹背景（background: linear-gradient() radial-gradient()，条纹背景可以使用 repeating-linear-gradient() repeating-radial-gradient()）
+S6、复杂的背景图案 
+S7、伪随机背景
+S8、连续的图像边框
+

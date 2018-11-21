@@ -1,0 +1,14 @@
+// 包含上 中 下 卷
+1、JavaScript 有七种内置类型： null  undefined  number  string  boolean  object  symbol（ES6新增）
+2、function 属于 object 的子类型（但是 typeof function a(){} === 'function'），array 也属于 object 子类型
+3、函数对象的 length 属性是其声明的参数的个数，示例 function foo(){}; foo.length === 2;
+4、可以使用 typeof 检测值的类型，null 对应 "object"，其他都是对应类型名的字符串
+5、对变量执行 typeof 操作时得到的结果并不是该变量的类型，而是该变量持有的值的类型
+6、JavaScript 中的变量是没有类型的，只有值才有。变量可以随时持有任何类型的值
+7、显示类型转换：字符串to数值 Number(..)
+8、在 JavaScript 中 undefined 和 undeclared 是不同的
+9、undefined 是值的一种，undeclared 则表示变量还没有被声明过，没有这种类型
+10、当遇到 undeclared 变量浏览器会报错：ReferenceError: xxx is not defined（未定义），这和 undefined 完全不同
+11、typeof 对 undefined 和 undeclared 变量都返回"undefined"，这是 typeof 的安全防范机制
+12、检查全局变量 DEBUG 时不出现 ReferenceError 错误代码如下：typeof DEBUG !== "undefined" //typeof 会阻止报错
+

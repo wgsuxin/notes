@@ -28,4 +28,5 @@
 13、焦点元素（如a、button）可以在 Tab 键切换到时变为 focus 状态（一般为虚框或外发光），非焦点元素（div、span）在没有设置 tabindex 时不会响应 Tab 键
 14、CSS 中的“未定义行为”表现为浏览器渲染差异，Firefox 浏览器认为 :active 发生在 mousedown 事件之后，所以如果在监听 mousedown 事件设置 preventDefault()，即阻止默认行为，就不会变成 :active 的样式了
 15、CSS 单条声明中有内容无法解析，则此条声明失效，相应属性以默认值渲染
-
+总结：
+“鑫三无准则”，即“无宽度，无图片，无浮动”

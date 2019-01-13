@@ -238,7 +238,7 @@ clientHeight 属性是元素内容区高度加上上下内边距高度
 5、为事件指定处理程序的方式第一种为：HTML事件处理程序，即在 html 标签填写相关特性值
 6、第二种为 DOM0 级事件处理程序，即 js 赋值事件属性，如：btn.onclick = function(){}
 7、第三种为 DOM2 级事件处理程序即监听器指定，btn.addEventListener("click", function(){})
-8、以上两种事件处理程序是在所绑定元素的作用域中运行
+8、后面两种事件处理程序是在所绑定元素的作用域中运行
 9、IE事件处理程序 attachEvent() 和 detachEvent()
 10、在触发 DOM 上的某个事件时，会产生一个事件对象 event ，包含着所有与事件有关的信息
 11、event 对象包含的特定事件有关的属性和方法详见 13.3.1 小节
@@ -313,3 +313,21 @@ clientHeight 属性是元素内容区高度加上上下内边距高度
 
 第 21 章 Ajax 与 Comet ====================================================================================
 1、Ajax 技术的核心是 XMLHttpRequest 对象（简称 XHR）
+2、XHR 异步流程：指定 onreadystatechange 事件处理程序，调用 open()，调用 send()，在事件程序中处理
+3、同步请求时可以检测 XHR 对象的状态属性 status，异步时检测 XHR 对象的 readyState 属性
+4、在接收到响应之前可以调用 abort() 方法来取消异步请求
+5、要成功发送请求头部信息，必须在调用 open() 方法之后且调用 send() 方法之前调用 setRequestHeader() 
+6、调用 XHR 对象的 getResponseHeader() 方法并传入头部字段名称，可以取得相应的响应头信息
+7、GET 是最常见的请求类型，最常用于向服务器查询某些信息
+8、POST 请求通常用于向服务器发送应该被保存的数据
+9、CORS（Cross-Origin Resource Sharing，跨源资源共享）是 W3C 的一个工作草案，定义了在必须访问跨源资源时，浏览器与服务器应该如何沟通
+10、图像 Ping 是与服务器进行简单、单向的跨域通信的一种方式
+11、JSONP 是 JSON with padding（填充式 JSON 或参数式 JSON）的简写，是应用 JSON 的一种新方法
+12、有两种实现 Comet 的方式：长轮询和流
+13、长轮询是传统轮询（也称为短轮询）的一个翻版
+14、Ajax 安全很重要，CSRF（Cross-Site Request Forgery，跨站点请求伪造）
+
+
+第 22 章 高 级 技 巧 ====================================================================================
+1、调用 Object 原生的 toString() 方法可以检测原生类型，如 Object.prototype.toString.call(arr) == "[object Array]"
+

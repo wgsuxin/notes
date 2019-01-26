@@ -402,4 +402,16 @@ HTMLCollection
 21.2、获取元素的 childNodes 属性
 21.3、获取元素的 attributes 属性
 21.4、访问特殊的集合，如 document.forms、document.images 等
-22、
+22、HTTP 请求是 Web 中的主要性能瓶颈之一
+23、进行部署的时候需要考虑的优化：文件合并、代码压缩、HTTP压缩
+
+
+第 25 章 新兴的 API ==================================================================================
+1、requestAnimationFrame()
+2、 Page Visibility API
+3、Geolocation API
+4、File API
+5、Web Timing
+6、Web Workers
+
+
